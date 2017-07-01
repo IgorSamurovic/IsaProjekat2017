@@ -55,7 +55,9 @@ public class UsersResource {
 		System.out.println(username + password);
 		HttpSession session = request.getSession(true);
 		User u = userDao.login(username, password);
-		
+		if (u == null) {
+			return null;
+		}
 		u.setPassword(null);
 		session.setAttribute("user", u);
 		
