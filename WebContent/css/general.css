@@ -1,0 +1,35 @@
+table, th, td {
+   border: 1px solid black;
+   text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+table {
+	width: 1200px;
+	text-align: center;
+	align: center;
+}
+
+table.friends th,
+table.friends td {
+   border: 1px solid black;
+}
+
+input, select, button {
+	width : 100%;
+}
+
+button.tableUsed {
+	background-color: #AAAAAA; 
+}
+
+button.tableSelected {
+	color : #FF0000;
+}
+
+button.tableUnused {
+	background-color: #CCCCCC; 
+}

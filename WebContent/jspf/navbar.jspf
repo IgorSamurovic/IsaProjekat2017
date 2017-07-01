@@ -1,0 +1,25 @@
+<%@ page import="entity.User" %>
+<%
+	boolean logged = false;
+	HttpSession ssn = request.getSession();
+	if (ssn != null) {
+		User u = (User) ssn.getAttribute("user");
+		if (u != null) {
+			logged = true;
+		}
+	}
+%>
+
+<% if (logged) {%>
+	<div>
+	<a href="home.jsp">Home</a>
+	<a href="profile.jsp">Profile</a>
+	<a href="reservation.jsp">Reservation</a>
+	<a href="logout.jsp">Logout</a>
+	</div>
+<% } else { %>
+	<div>
+	<a href="login.jsp">Login</a>
+	<a href="registration.jsp">Register</a>
+	</div>
+<% } %>

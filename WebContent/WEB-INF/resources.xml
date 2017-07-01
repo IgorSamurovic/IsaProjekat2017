@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <tomee>
-  <Resource id="SiteDS" type="javax.sql.DataSource">
-    JdbcDriver com.mysql.jdbc.Driver
-    JdbcUrl jdbc:mysql://localhost/isa
-    UserName root
-    Password root
-    JtaManaged true
-    DefaultAutoCommit false 
-  </Resource>
+	<Resource id="isa" type="javax.sql.DataSource">
+	  JdbcDriver com.mysql.jdbc.Driver
+	  JdbcUrl jdbc:mysql://localhost/isa
+	  UserName root
+	  Password root
+	  JtaManaged true
+	  DefaultAutoCommit false 
+	</Resource>
+	<Service id="json" class-name="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
 </tomee>
